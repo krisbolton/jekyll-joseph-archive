@@ -1,0 +1,92 @@
+#-------------------------------
+# General Site Settings
+title: Kris Bolton
+logo: # You can add own logo. For example '/images/logo.png'.
+description: Kris Bolton works in Data Protection and writes about security, risk, computer science and the future.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://krisbolton.com" # the base hostname & protocol for your site, e.g. http://example.com
+
+#-------------------------------
+# Author Settings
+author:
+  name: Kris Bolton
+  bio: I work in Information Security and Data Protection. I write about security, risk, AI, comp sci and the future.
+  avatar: '/images/kris-bolton-profile.jpg'
+
+social:
+- {icon: "ion-logo-twitter", label: Twitter, link: "https://twitter.com/krisbolton"}
+- {icon: "ion-logo-github", label: GitHub, link: "https://github.com/krisbolton"}
+- {icon: "ion ion-md-person", label: 0x00 Sec, link: "https://0x00sec.org/u/kris/summary"}
+- {icon: "ion ion-md-mail", label: Mail, link: "/contact/"}
+
+# Example of adding a new link to the author section and footer - {icon: "ion-logo-github", label: Github, link: "https://github.com"}
+# Other icons can be found at https://ionicons.com/v4/
+
+#-------------------------------
+# Hero Settings
+hero:
+  hero__title: Hey, I’m Kris! <br> I work in Information Security.
+  hero__description: I write about security, AI, computer science and the future. You will find discussion and resources here.
+  hero__image: '/images/kris-bolton.jpg'
+
+
+#-------------------------------
+# Newsletter (_includes/footer-widgets/widget-subscribe.html)
+mailchimp: true # To enable the mailchimp form, use the value 'true'. To disable the form, use the value 'false' or leave the field blank.
+mailchimp__title: Get email updates # Add your Title
+mailchimp__text: Subscribe to get emails of recent posts. No more than one email per month. # Add your description.
+mailchimp__identifier: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+mailchimp__button__text: Join # Add your button text
+
+
+#-------------------------------
+# Contact Settings
+contact:
+  email: alt.krisb@gmail.com # Add your email for contact form
+  description: # Add a description of your form
+
+# NOTE
+# Joseph comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want.
+
+
+#-------------------------------
+# Comment Section (Disqus)
+disqus-identifier: # add your shortname for Disqus Comment. For example anvodstudio-demo
+
+
+#-------------------------------
+# Google Analytics
+google-analytics:
+
+
+#-------------------------------
+# Build Settings
+markdown: kramdown
+permalink: /:title
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll/tagging
+
+paginate: 5
+paginate_path: "/page/:num"
+
+# Pages Path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+include:
+  - _pages
+  
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  /:title
+
+sass:
+  sass_dir: _sass
+  style: compressed
